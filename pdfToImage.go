@@ -27,7 +27,7 @@ func main() {
 		imgname := writedir + "/" + strings.Replace(filename, "pdf[0]", "png", 1)
 		if _, err := os.Stat(imgname); os.IsNotExist(err) {
 			fmt.Println("processing...")
-			convertPdfToImg(filename, imgname)
+			convertPdfToImg(readdir+"/"+filename, imgname)
 		}
 	}
 }
